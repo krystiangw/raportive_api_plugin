@@ -1,0 +1,19 @@
+{
+  "name": "raportive_plugin",
+  "version": "1.0.0",
+  "description": "Plugin using linkedin raportive api",
+  "main": "raportive_plugin.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "raportive"
+  ],
+  "author": "krystiangw",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^0.3.17",
+    "json2csv": "^2.2.1",
+    "xml2js": "^0.4.4"
+  }
+}
