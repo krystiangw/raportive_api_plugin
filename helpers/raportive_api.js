@@ -1,6 +1,8 @@
-var configs = require('./configs.js');
 var https = require('https');
 var q = require('q');
+
+var configs = require('./../configs.js');
+
 
 httpsConfig();
 

@@ -1,10 +1,10 @@
 var q = require('q');
 
-var raportiveApi = require('./raportive_api.js');
-var emailsGenerator = require('./emails_generator.js');
-var xmlConverter = require('./xml_converter.js');
-var logger = require('./logger.js');
-var csvHelper = require('./csv_helper.js');
+var raportiveApi = require('./helpers/raportive_api.js');
+var emailsGenerator = require('./helpers/emails_generator.js');
+var xmlConverter = require('./helpers/xml_converter.js');
+var logger = require('./helpers/logger.js');
+var csvHelper = require('./helpers/csv_helper.js');
 var configs = require('./configs.js');
 
 init();

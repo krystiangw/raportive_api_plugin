@@ -1,10 +1,10 @@
+var Converter=require("csvtojson").core.Converter;
 var json2csv = require('json2csv');
 var fs = require('fs');
-var Converter=require("csvtojson").core.Converter;
 var q = require('q');
 
 var logger = require('./logger.js');
-var configs = require('./configs.js');
+var configs = require('./../configs.js');
 
 
 var csvHelper = (function () {
