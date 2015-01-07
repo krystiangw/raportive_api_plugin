@@ -1,5 +1,6 @@
 # Raportive API plugin
-### Node script using Raportive API. Based on the name of the person and the domain script searches for correct email in linkedin database.
+======================
+Node script using Rapportive API. Based on the user name and domain, script searches correct email address.
 ======================
 
 ## Requirements
