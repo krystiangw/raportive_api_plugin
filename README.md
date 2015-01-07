@@ -1,5 +1,5 @@
 # Raportive API plugin
-### Node script using Raportive API. Based on the name of the person and the domain script searchs for correct email in linkedin database.
+### Node script using Raportive API. Based on the name of the person and the domain script searches for correct email in linkedin database.
 ======================
 
 ## Requirements
@@ -11,7 +11,7 @@ brew install node
 
 ###  2. Clone repository
 ```
-git clone 
+git clone git@github.com:krystiangw/raportive_api_plugin.git
 ```
 ### 3 Install node dependiences
 ```
