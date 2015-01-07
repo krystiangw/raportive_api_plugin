@@ -1,4 +1,5 @@
 # Raportive API plugin
+
 ======================
 Node script using Rapportive API. Based on the user name and domain, script searches correct email address.
 ======================
