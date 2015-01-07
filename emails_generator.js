@@ -45,8 +45,8 @@ var emailsGenerator = (function () {
 				lastName[0] + '.' + firstName,
 				lastName[0] + firstName,
 				lastName + firstName[0],
-				];
-				var results = results.concat(fullNameResults);
+			];
+			var results = results.concat(fullNameResults);
 		}
 		
 		var results = addDomain(results, domain);

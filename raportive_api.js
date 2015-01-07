@@ -17,9 +17,6 @@ var raportiveApi = (function () {
 		get: get
 	};
 
-
-
-
 	function get(params) {
 		var deferred = q.defer();
 

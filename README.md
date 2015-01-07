@@ -53,13 +53,13 @@ Generated list for: jan, koper, gmail.com,
 'koperj@gmail.com'
 ```
 
-You can set input file path as argument. By default paht is './input.csv'
+You can set input file path as argument. By default path is './input.csv'
 
 ```
 INPUT="my_file.csv" TOKEN="l6s6U8oXPzfHn4zXtIiZcYoq6Dm3bK9SQ1g_" node raportive_plugin.js
 ```
 
-You can set output file path as argument. By default paht is './output.csv'
+You can set output file path as argument. By default path is './output.csv'
 
 ```
 OUTPUT="my_file.csv" TOKEN="l6s6U8oXPzfHn4zXtIiZcYoq6Dm3bK9SQ1g_" node raportive_plugin.js
