@@ -21,7 +21,30 @@ npm install
 ```
 
 ## Using
-###  Use 'node' to run. 
+There are two ways
+### 1. ExpressJS API
+Set valid raportive token. 
+```
+/token?set=OAPtKYT2186sU2lg5bZvts5kjwtla5Fh-Qfi
+```
+
+You can than check token
+```
+/token
+```
+Search emails with params:
+```
+firstName
+lastName
+domain
+```
+Example:
+```
+/profile?firstName=john&lastName=smith&domain=gmail.com
+```
+
+
+### 2.CSV script 
 Be sure to set env TOKEN variable. TOKEN is auth token returned by Raportive API. Example:
 
 ```

@@ -27,7 +27,7 @@ var raportiveApi = (function () {
 			host: configs.LINKEDIN_API_HOST,
 			path: path,
 			headers: {
-				'oauth_token': configs.AUTH_TOKEN
+				'oauth_token': (configs.AUTH_TOKEN || params.AUTH_TOKEN)
 			}
 		};
 

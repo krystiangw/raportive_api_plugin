@@ -12,10 +12,11 @@
   "author": "krystiangw",
   "license": "ISC",
   "dependencies": {
+    "bunyan": "^1.2.3",
     "csvtojson": "^0.3.17",
+    "express": "^4.11.2",
     "json2csv": "^2.2.1",
-    "xml2js": "^0.4.4",
     "q": "^1.1.2",
-    "bunyan": "^1.2.3"
+    "xml2js": "^0.4.4"
   }
 }
