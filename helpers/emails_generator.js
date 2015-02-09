@@ -7,9 +7,9 @@ var emailsGenerator = (function () {
 
 	function generate(params) {
 
-		var firstName = String(params.firstName).toLowerCase();
-		var lastName = String(params.lastName).toLowerCase();
-		var domain = String(params.domain).toLowerCase();
+		var firstName = String(params.firstName || '').toLowerCase();
+		var lastName = String(params.lastName || '').toLowerCase();
+		var domain = String(params.domain || '').toLowerCase();
 		var results = [];
 
 		if (!domain) return results;
@@ -21,7 +21,7 @@ var emailsGenerator = (function () {
 			var results = results.concat(firstNameResults);
 		}
 
-		if (lastName) {
+		if (lastName!==undefined) {
 			var lastNameResults = [
 				lastName
 			];
