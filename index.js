@@ -35,8 +35,6 @@ app.get('/profile', function (req, res) {
     
 });
 
-
-
 app.get('/token', function (req, res) {
     if (req.query.set){
         app.session['token'] = req.query.set;
@@ -48,6 +46,26 @@ app.get('/token', function (req, res) {
     } 
 });
 
+app.get('/:path*', function (req, res) {
+    var AUTH_TOKEN = app.session['token']
+
+    if (!AUTH_TOKEN) {
+        res.status(404).send('No token found');
+    }
+
+    raportiveApi.get(req.originalUrl, AUTH_TOKEN)
+    .then(function(response){
+        xmlConverter.convert(response)
+        .then(function(convertedResults){
+            res.send(convertedResults);
+        });
+
+    }, function(error){
+        res.status(404).send(error);
+    });
+});
+
+
 
 function processChecking(emails, options) {
     var deferred = q.defer();
@@ -55,13 +73,9 @@ function processChecking(emails, options) {
     var results = [];
 
     emails.forEach(function(email){
-        var params = {
-            key: 'email',
-            value: email,
-            AUTH_TOKEN: options.AUTH_TOKEN
-        };
+        var path = '/people/email=' + email;
 
-        raportiveApi.get(params)
+        raportiveApi.get(path, options['AUTH_TOKEN'])
         .then(function(res){
             xmlConverter.convert(res)
             .then(function(convertedResults){
@@ -87,3 +101,4 @@ function processChecking(emails, options) {
 
     return deferred.promise;
 };
+

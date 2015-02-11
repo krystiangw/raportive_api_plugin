@@ -17,10 +17,7 @@ var xmlConverter = (function () {
 				logger.error('xml converting error' + err);
 				deferred.reject(err);
 			}
-			for (i in results.person) {
-				results.person[i] = results.person[i].toString();
-			};
-		    deferred.resolve(results.person);
+		    deferred.resolve(JSON.parse(JSON.stringify(results)));
 		});
 		return deferred.promise;
 	};

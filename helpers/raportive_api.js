@@ -13,21 +13,21 @@ function httpsConfig() {
 	}
 };
 
-
 var raportiveApi = (function () {
 	return {
 		get: get
 	};
 
-	function get(params) {
-		var deferred = q.defer();
 
-		var path = configs.LINKEDIN_API_PATH + params.key + '=' + encodeURIComponent(params.value);
+	function get(path, AUTH_TOKEN){
+		var deferred = q.defer();
+		var base_path = configs.LINKEDIN_API_PATH;
+
 		var options = {
 			host: configs.LINKEDIN_API_HOST,
-			path: path,
+			path: base_path + path,
 			headers: {
-				'oauth_token': (configs.AUTH_TOKEN || params.AUTH_TOKEN)
+				'oauth_token': (configs.AUTH_TOKEN || AUTH_TOKEN)
 			}
 		};
 
@@ -44,7 +44,7 @@ var raportiveApi = (function () {
 
 			} else if (res.statusCode === 404){
 				deferred.reject({
-					message: '404: no valid '+ params.key + ' found under: ' + params.value
+					message: '404: no valid profile found'
 				});
 			} else if (res.statusCode === 401){
 				deferred.reject({
@@ -60,6 +60,7 @@ var raportiveApi = (function () {
 		});
 
 		return deferred.promise;
+
 	};
 
 })();

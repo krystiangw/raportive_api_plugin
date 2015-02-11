@@ -47,12 +47,9 @@ function getResults(emails) {
 	var counter = emails.length;
 
 	emails.forEach(function(email){
-		var params = {
-			key: 'email',
-			value: email
-		};
+		var path = '/people/email=' + email;
 
-		raportiveApi.get(params)
+		raportiveApi.get(path)
 		.then(function(res){
 			xmlConverter.convert(res)
 			.then(function(convertedResults){
